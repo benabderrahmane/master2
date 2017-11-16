@@ -15,7 +15,7 @@ public class Test {
 
 		diskFileExplorer.doStats(pathToExplore + "src/");
 		diskFileExplorer.doStatsOnMethods(pathToExplore + "bin/");
-		int x = 0;
+		int x = 5;
 		
 		System.out.println("1- Nombre de classes dans l'application : " + diskFileExplorer.getClassCount());
 		System.out.println("2- Nombre de lignes de code dans l'application : " + diskFileExplorer.getLineCount());
@@ -25,21 +25,24 @@ public class Test {
 		
 		//#TODO
 		System.out.println("6- Nombre moyen de ligne de code par méthode : ");
-		System.out.println("7- Nombre moyen d'attributs par classe : ");
-		System.out.println("8- Les 10% des classes qui possèdent le plus grand nombre de méthodes : ");
-		System.out.println("9- Les 10% des classes qui possèdent le plus grand nombre d'attributs : ");
+		
+		System.out.println("7- Nombre moyen d'attributs par classe : " + diskFileExplorer.nbrMoyAttributClass());
+		System.out.println("8- Les 10% des classes qui possèdent le plus grand nombre de méthodes : \n" + diskFileExplorer.maxMethodClass());
+		System.out.println("9- Les 10% des classes qui possèdent le plus grand nombre d'attributs : \n" + diskFileExplorer.maxAttributClass());
+		
+		//TODO
 		System.out.println("10- Les classes qui appartiennent aux deux catégories précédentes : ");
-		System.out.println("11- Les classes qui possèdent plus de " + x + " méthodes : ");
+		
+		System.out.println("11- Les classes qui possèdent plus de " + x + " méthodes : \n" + diskFileExplorer.maxMethodClass(x));
+		
+		//TODO
 		System.out.println("12- Les 10% de méthodes qui possèdent le plus grand nombre de ligne de code par classe : ");
-		System.out.println("13- Le nombre maximal de paramètres par rapport de toutes les classes de l'application : ");
+		
+		System.out.println("13- Le nombre maximal de paramètres par rapport à toutes les classes de l'application est : \n" + diskFileExplorer.getBigAttributeClass());
 		
 		
 		System.out.println("********************************************************************");
 		
-//		System.out.println("----------");
-//		System.out.println("Analyse de " + pathToExplore + " en " + (System.currentTimeMillis() - start) + " mses");
-//		System.out.println(diskFileExplorer.dircount + " dossiers");
-//		System.out.println(diskFileExplorer.filecount + " fichiers");
 	}
 
 }
