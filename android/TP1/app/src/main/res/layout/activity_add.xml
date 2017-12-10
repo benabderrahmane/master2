@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yassine.tp1.AddActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:ignore="MissingConstraints">
+
+        <Spinner
+            android:id="@+id/typeEvent"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/titre"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:ems="10"
+            android:layout_weight="1"
+            android:inputType="textPersonName"
+            android:hint="Titre de l'evenement" />
+
+        <EditText
+            android:id="@+id/dateE"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:ems="10"
+            android:layout_weight="1"
+            android:inputType="date"
+            android:hint="Date de l'evenement : jj/mm/aaaa"/>
+
+        <EditText
+            android:id="@+id/heureE"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:ems="10"
+            android:layout_weight="1"
+            android:inputType="date"
+            android:hint="Heure de l'evenement : hh:mm:ss"/>
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_weight="1"
+            android:inputType="textMultiLine"
+            android:hint="Description de l'evenement"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Valider l'ajout" />
+
+            <Button
+                android:id="@+id/retour"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Retour" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
