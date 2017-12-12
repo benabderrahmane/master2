@@ -71,6 +71,6 @@ public final class Evenement {
 
     @Override
     public String toString() {
-        return "ID : " + id + "L'evenement " + titreE + " ( " + typeE + " ) est prévu le " + dateE + " à " + heureE + "\n Description de l'evenement :\n" + descE;
+        return "\nL'evenement " + titreE + " ( " + typeE + " ) est prévu le " + dateE + " à " + heureE + "\n Description de l'evenement :\n" + descE + "\n";
     }
 }
