@@ -54,6 +54,12 @@ public class SQLiteDatabaseHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    public void deleteById(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        db.delete(TABLE_NAME, KEY_ID + " = ?", new String[] { String.valueOf(id) });
+        db.close();
+    }
+
     public Evenement getEvenement(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         //query(table_name, column names, selections, selections args, group by, having, order by, limit)

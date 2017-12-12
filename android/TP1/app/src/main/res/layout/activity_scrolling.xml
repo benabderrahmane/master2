@@ -33,7 +33,8 @@
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <!--<include layout="@layout/content_main" />-->
+
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/add_task"
@@ -43,5 +44,11 @@
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
         app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ListView
+        android:id="@+id/listSearched"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp" ></ListView>
 
 </android.support.design.widget.CoordinatorLayout>
